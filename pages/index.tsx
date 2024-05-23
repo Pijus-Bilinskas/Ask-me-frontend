@@ -20,8 +20,11 @@ const Index = () => {
 
     const fetchQuestions = async () => {
         try {
-            const response = await axios.get(`${process.env.SERVER_URL}/questions`);
+            
+            
 
+            const response = await axios.get(`${process.env.SERVER_URL}/questions`);
+            
             setQuestions(response.data.questions);
 
             console.log(response);
