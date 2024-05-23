@@ -1,0 +1,8 @@
+:root {
+    --primary-text-color: #313131;
+    --color-danger: rgb(159, 63, 63);
+  }
+  
+  * {
+    margin: 0;
+  }
