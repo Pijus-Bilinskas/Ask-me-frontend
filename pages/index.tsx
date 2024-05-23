@@ -2,6 +2,7 @@ import axios from "axios";
 import { links } from "../constants/link";
 import React,{ useEffect ,useState } from "react";
 import Cookies from "js-cookie";
+import QcardsWrapper from "../components/QcardWrapper/QcardWrapper";
 import styles from "@/styles/Home.module.css";
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
 import { QuestionType } from "@/types/question";
@@ -40,7 +41,7 @@ const Index = () => {
             <Link href="/ask question">Ask a question</Link>
            </div>
 
-            
+            {questions && <QcardsWrapper questions={questions}/>}
         </PageTemplate>
     )
 }
