@@ -10,7 +10,7 @@ type PageTemplateProps = {
 
 const PageTemplate = ({ children }: PageTemplateProps) => {
     return(
-        <div>
+        <div className={styles.wrapper}>
             <Header logo={"Ask me"} links={links}/>
             <div className={styles.content}>{children}</div>
             <Footer />
