@@ -10,7 +10,7 @@ type QcardProps = {
 
 const Qcard = ({ id, question_text, date }: QcardProps) => {
     return(
-        <Link href={`/yes/${id}`} className={styles.wrapper}>
+        <Link href={`/question/${id}`} className={styles.wrapper}>
             <h2>{question_text}</h2>
             <h3>{date}</h3>
         </Link>
