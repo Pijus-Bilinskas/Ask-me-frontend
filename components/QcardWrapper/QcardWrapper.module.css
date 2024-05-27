@@ -1,19 +1,17 @@
-.cardsWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+.qcardsWrapper {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    margin: 2rem 1rem;
   }
   
   @media only screen and (max-width: 768px) {
-    .cardsWrapper {
+    .qcardsWrapper {
       grid-template-columns: 1fr 1fr;
     }
   }
   
   @media only screen and (max-width: 550px) {
-    .cardsWrapper {
+    .qcardsWrapper {
       grid-template-columns: 1fr;
     }
   }

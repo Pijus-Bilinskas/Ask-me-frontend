@@ -29,7 +29,8 @@ const Header = ({ logo, links}: HeaderProps) => {
                 <ul className={styles.links}>
                     {links.map((link) => {
                         return (
-                            <a href={link.href} key={link.id}>
+                            <a href={link.href}
+                            key={link.id}>
                                 {link.title}
                             </a>
                         );

@@ -1,13 +1,16 @@
 .questionWrapper {
-    margin: 20px;
+    margin: auto;
+    width: 70%;
 }
 
 .question {
     margin-bottom: 20px;
+    border: solid black 2px;
 }
 
 .answers {
     margin-top: 20px;
+    border: solid black 2px;
 }
 
 .answer {

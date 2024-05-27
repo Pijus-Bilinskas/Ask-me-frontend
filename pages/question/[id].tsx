@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import { AnswerType } from "@/types/answer";
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
 import ItemWrapper from "@/components/questionpage/questionpage";
+import Button from "@/components/Button/Button";
+import styles from "./question.module.css"
 
 const QuestionAndAnswers = () => {
     const [question, setQuestion] = useState();
-    const [answers, setAnswers] = useState();
+    const [answers, setAnswers] = useState<AnswerType[]>([]);
+    const [newAnswer, setNewAnswer ] = useState("")
     const router = useRouter();
 
     const fetchQuestionAndAnswers = async () => {
@@ -30,19 +34,54 @@ const QuestionAndAnswers = () => {
         };
     };
 
-    // useEffect(() => {
-    //     if(router.query.id) {
-    //         fetchQuestionAndAnswers()
-    //     }
-    // }, [router.query.id])
+
+    const handleAddAnswer = async () => {
+        try {
+            const headers = {
+                authorization: Cookies.get("jwt_token")
+            };
+
+            const response = await axios.post(
+                `${process.env.SERVER_URL}/question/${router.query.id}/answers`,
+                { answer_text: newAnswer },
+                { headers }
+            );
+            console.log(response)
+            setAnswers([...answers, response.data.response])
+            setNewAnswer("")
+        } catch (err) {
+            console.log("error occurred", err)
+        }
+    }
+
 
     useEffect(() => {
         router.query.id && fetchQuestionAndAnswers();
     }, [router]);
 
+    useEffect(() => {
+        console.log("Current answers state:", answers);
+    }, [answers]);
+
+    const isAnswerInserted = newAnswer;
+
     return(
         <PageTemplate>
             {question && answers && <ItemWrapper question={question} answers={answers} />}
+           <div className={styles.addAnswer}>
+            <input 
+            type="text"
+            value={newAnswer}
+            onChange={(e)=> setNewAnswer(e.target.value)}
+            placeholder="Write thy answer here..."
+            />
+            <Button
+            className={`${isAnswerInserted ? styles.validBtn : styles.invalidBtn }`}
+            title="Comment"
+            onClick={handleAddAnswer}
+            type="NORMAL"
+            />
+            </div>
         </PageTemplate>
     )
 }

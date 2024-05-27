@@ -11,8 +11,10 @@ type QcardProps = {
 const Qcard = ({ id, question_text, date }: QcardProps) => {
     return(
         <Link href={`/question/${id}`} className={styles.wrapper}>
+            <div className={styles.infoCard}>
             <h2>{question_text}</h2>
             <h3>{date}</h3>
+            </div>
         </Link>
     )
 }

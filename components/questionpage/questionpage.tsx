@@ -22,12 +22,13 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
 
     const deleteAnswer = async () => {
         try{
+
             const headers = {
                 authorization: cookies.get("jwt_token"),
             };
 
             const response = await axios.delete(
-                `${process.env.SERVER_URL}/question/${router.query.id}/answers`,
+                `${process.env.SERVER_URL}/answer/`,
                 {
                     headers,
                 }
