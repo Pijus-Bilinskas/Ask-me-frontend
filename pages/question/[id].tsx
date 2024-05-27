@@ -62,9 +62,7 @@ const QuestionAndAnswers = () => {
         router.query.id && fetchQuestionAndAnswers();
     }, [router]);
 
-    useEffect(() => {
-        console.log("Current answers state:", answers);
-    }, [answers]);
+ 
 
     const isAnswerInserted = newAnswer;
 

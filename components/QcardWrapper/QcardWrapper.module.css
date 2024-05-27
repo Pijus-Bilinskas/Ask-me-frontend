@@ -6,13 +6,4 @@
     background-color: var(--primary-backround-color);
   }
   
-  @media only screen and (max-width: 768px) {
-    .qcardsWrapper {
-
-    }
-  }
-  
-  @media only screen and (max-width: 550px) {
-    .qcardsWrapper {
-    }
-  }
+ 
