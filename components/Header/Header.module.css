@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: var(--primary-backround-color);
+    background-color: var(--secondary-backround-color);
     height: 6rem;
     display: flex;
     align-items: center;
@@ -8,8 +8,8 @@
     border-bottom: 1px solid black;
   }
 
-  .logo {
-    font-size: 1.8rem;
+  .WebTitle {
+    font-size: 2.2rem;
     color: var(--primary-text-color);
     text-decoration: none;
   }
@@ -62,7 +62,7 @@
     .mobileMenu {
       display: flex;
       justify-content: center;
-      background-color: var(--primary-backround-color);
+      background-color: var(--secondary-backround-color);
       position: fixed;
       width: 100%;
       height: calc(100vh - 80px);

@@ -1,8 +1,29 @@
 .wrapper {
-    background-color: #948979;
+    background-color: var(--secondary-backround-color);
+    border-top: 1px solid black;
     height: 6rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 2rem;
+  }
+
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .socials img{
+    height: 33px;
+  }
+
+  .adress {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adress p {
+    font-size: 13px;
   }

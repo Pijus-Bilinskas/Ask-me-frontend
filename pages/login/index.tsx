@@ -9,7 +9,7 @@ const Index = () => {
     return(
         <div>
             <div className={styles.contWrapper}>
-            <Header logo={"Ask me"} links={links} />
+            <Header WebTitle={"Ask me"} links={links} />
             <LoginForm />
             <div className={styles.linkWrapper}>
             <p>Dont have an account:

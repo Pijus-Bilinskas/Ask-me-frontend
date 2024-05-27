@@ -7,7 +7,7 @@ import styles from "./register.module.css"
 const Index = () => {
     return(
         <div>
-            <Header logo={"Ask me"} links={links} />
+            <Header WebTitle={"Ask me"} links={links} />
             <div className={styles.wrapper}>
             <RegisterForm />
             </div>

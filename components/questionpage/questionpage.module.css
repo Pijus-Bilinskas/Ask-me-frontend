@@ -1,3 +1,7 @@
+.mainwrapper{
+    background-color: var(--primary-backround-color);
+}
+
 .questionWrapper {
     margin: auto;
     width: 100%;
@@ -35,6 +39,11 @@
 .answers {
     margin-top: 20px;
     padding-bottom: 0.5rem;
+}
+
+.NoneAnswers{
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 .answer {

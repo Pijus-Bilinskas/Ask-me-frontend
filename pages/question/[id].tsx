@@ -50,7 +50,10 @@ const QuestionAndAnswers = () => {
             setAnswers([...answers, response.data.response])
             setNewAnswer("")
         } catch (err) {
-            console.log("error occurred", err)
+            // @ts-expect-error this is correct way to catch error
+            if(err.response.status === 401) {
+                router.push("/login")
+            }
         }
     }
 

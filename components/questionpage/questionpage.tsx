@@ -39,7 +39,10 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
             router.push("/");
          }
         } catch (err) {
-            console.log(err);
+            // @ts-expect-error this is correct way to catch error
+            if(err.response.status === 401) {
+                router.push("/login")
+            }
         }
     };
 
@@ -54,15 +57,19 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
                 { headers }
             )
 
+    
             console.log(response)
             window.location.reload()
          } catch (err) {
-        console.log(err)
+             // @ts-expect-error this is correct way to catch error
+            if(err.response.status === 401) {
+                router.push("/login")
+            }
     }
 }
 
     return( 
-            <main>
+            <main className={styles.mainwrapper}>
                 <div className={styles.questionWrapper}>
                     {question && (
                         <div className={styles.question}>
@@ -101,7 +108,7 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
                             ))}
                         </div>
                     ) : (
-                        <div>No answers yet.</div>
+                        <div className={styles.NoneAnswers}>No answers yet.</div>
                     )}
                 </div>
                 </main>

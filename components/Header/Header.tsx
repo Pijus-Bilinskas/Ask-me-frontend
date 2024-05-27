@@ -11,18 +11,18 @@ type LinkType = {
 
 
 type HeaderProps = {
-    logo: string;
+    WebTitle: string;
     links: LinkType[];
 };
 
 
-const Header = ({ logo, links}: HeaderProps) => {
+const Header = ({ WebTitle, links}: HeaderProps) => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <header className={styles.wrapper}>
-            <Link href="/" className={styles.logo}>
-            {logo}
+            <Link href="/" className={styles.WebTitle}>
+            {WebTitle}
             </Link>
 
             <nav>
