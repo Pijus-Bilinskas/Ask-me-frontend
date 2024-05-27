@@ -15,7 +15,7 @@ const Footer = () => {
     <div className={styles.adress}>
         <p>Kedainiai, 18 Lansbergio troba</p>
         <p>Kalabybiskes, EC2A 1AH LT</p>
-        <p>©Ask-Me</p>
+        <p>©2002 some buis words and AITA</p>
     </div>
     </footer>
 };

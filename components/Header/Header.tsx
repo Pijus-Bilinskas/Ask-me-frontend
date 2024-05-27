@@ -50,7 +50,7 @@ const Header = ({ WebTitle, links}: HeaderProps) => {
                     <ul className={styles.mobileLinks}>
                         {links.map((link) => {
                             return (
-                                <a className={link.href} key={link.id}>
+                                <a href={link.href} key={link.id}>
                                     {link.title}
                                 </a>
                             );

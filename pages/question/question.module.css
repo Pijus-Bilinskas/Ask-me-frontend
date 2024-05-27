@@ -33,14 +33,16 @@
 }
 
 .validBtn {
+    width: 10%;
     background-color: rgb(34, 34, 34);
     color: white;
     cursor: pointer;
-    padding: 1px 10px;
+    padding: 12px 10px;
     border-radius: 2px;
   }
   
   .invalidBtn {
+    width: 10%;
     background-color: rgb(71, 71, 71);
     color: rgb(71, 71, 71);
     cursor: none;
@@ -57,3 +59,40 @@
         color: white;
         cursor: pointer;
 }
+
+@media only screen and (max-width: 1100px) {
+    .addAnswer{
+        width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .addAnswer{
+        width: 80%;
+    }
+    .addAnswerValid{
+        width: 85%;
+    }
+
+    .validBtn {
+    width: 15%;
+    }
+    .invalidBtn{
+        width: 15%;
+    }
+  }
+  @media only screen and (max-width: 570px) {
+    .addAnswer{
+        width: 85%;
+    }
+    .addAnswerValid{
+        width: 80%;
+    }
+
+    .validBtn {
+    width: 20%;
+    }
+    .invalidBtn{
+        width: 20%;
+    }
+  }

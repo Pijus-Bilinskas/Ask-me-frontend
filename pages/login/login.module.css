@@ -1,6 +1,5 @@
 .contWrapper {
     background-color: var(--primary-backround-color);
-  padding-bottom: 37.8rem;
   height: 100%;
 }
 
@@ -23,3 +22,4 @@
 .link:hover{
     color: rgb(233, 233, 233);
 }
+

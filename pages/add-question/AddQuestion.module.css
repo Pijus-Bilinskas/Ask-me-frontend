@@ -1,6 +1,5 @@
 .wrapper{
   background-color: var(--primary-backround-color);
-  padding-bottom: 37rem;
 }
 
 .form {
@@ -10,11 +9,11 @@
     margin: auto;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    width: 500px;
+    width: 40%;
   }
   
   .form input {
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
   
   .validBtn {
@@ -26,4 +25,25 @@
     background-color: rgb(22, 22, 22);
     color: rgb(235, 235, 235);
     cursor: not-allowed;
+  }
+
+  @media only screen and (max-width: 1168px) {
+    .form {
+      width: 50%;
+    }
+
+  }
+
+  @media only screen and (max-width: 950px) {
+    .form {
+      width: 65%;
+    }
+
+  }
+
+  @media only screen and (max-width: 528px) {
+    .form {
+      width: 75%;
+    }
+
   }
