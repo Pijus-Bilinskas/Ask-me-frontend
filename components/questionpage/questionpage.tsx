@@ -20,7 +20,7 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
 
     const [isShowWarning, setShowWarning] = useState(false);
 
-    const deleteAnswer = async () => {
+    const deleteQuestion = async () => {
         try{
 
             const headers = {
@@ -28,17 +28,38 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
             };
 
             const response = await axios.delete(
-                `${process.env.SERVER_URL}/answer/`,
+                `${process.env.SERVER_URL}/question/${router.query.id}`,
                 {
                     headers,
                 }
             );
 
            console.log("response", response)
+           if(response.status === 200) {
+            router.push("/");
+         }
         } catch (err) {
             console.log(err);
         }
     };
+
+    const deleteAnswer = async (answer_id: any) => {
+        try{
+            const headers = {
+                authorization: cookies.get("jwt_token")
+            }
+
+            const response = await axios.delete(
+                `${process.env.SERVER_URL}/answer/${answer_id}`,
+                { headers }
+            )
+
+            console.log(response)
+            window.location.reload()
+         } catch (err) {
+        console.log(err)
+    }
+}
 
     return( 
             <main>
@@ -47,11 +68,16 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
                         <div className={styles.question}>
                             <h2>{question.question_text}</h2>
                             <p>{question.date}</p>
+                            <Button 
+                            className={styles.Button}
+                            type="WARNING"
+                            title="Delete question"
+                            onClick={deleteQuestion}
+                            />
                         </div>
                     )}
                     {answers.length > 0 ? (
                         <div className={styles.answers}>
-                            <h2>Answers</h2>
                             {answers.map((answer) => (
                                 <div key={answer.id} className={styles.answer}>
                                     <h3>{answer.answer_text}</h3>
@@ -61,7 +87,7 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
                                     className={styles.Button}
                                     type="WARNING"
                                     title="Delete answer"
-                                    onClick={() => setShowWarning(true)}
+                                    onClick={() =>deleteAnswer(answer.id)}
                                     />
                                 </div>
                                 // {isShowWarning && (

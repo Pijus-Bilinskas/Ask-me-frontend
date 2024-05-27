@@ -15,17 +15,14 @@ const AddQuestion = () => {
 
     const addQuestion = async () => {
         try{
-            const newQuestion = async () => {
-                question_text: question_text
-            };
-
+        
             const headers = {
                 authorization: Cookies.get("jwt_token"),
             };
 
             const response = await axios.post(
                 `${process.env.SERVER_URL}/question`,
-                newQuestion,
+                {question_text: question_text},
                 {
                     headers,
                 }
