@@ -68,7 +68,7 @@ const RegisterForm = () => {
             placeholder="password"
             />
 
-            <Button  onClick={onRegister} title="Register" />
+            <Button  onClick={onRegister} className={styles.button} title="Register" />
 
             {isError && (
                 <div className={styles.error}>Please fill all the boxes</div>

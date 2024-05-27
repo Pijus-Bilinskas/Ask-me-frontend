@@ -3,16 +3,15 @@
     flex-direction: column;
     gap: 1rem;
     margin: auto;
-    margin-top: 6rem;
-    width: 28rem;
+    width: 32rem;
 }
 
 .form input {
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
-.form button {
-    padding: 0.5rem;
+.form button:hover {
+    background-color: rgb(204, 204, 204);
 }
 
 .error {

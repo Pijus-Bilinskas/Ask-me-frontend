@@ -1,16 +1,7 @@
-/* .wrapper {
-    width: 13rem;
-    height: 20rem;
-    background-color: rgb(248, 248, 248);
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-    transition: 0.3s;
-  } */
 
   .wrapper {
     margin: auto;
-    width: 55%;
+    width: 60%;
     transition: 0.4s;
   }
   
@@ -20,14 +11,29 @@
   
 
   .infoCard {
-    border: solid black 2px;
-    padding: 1rem;
+    padding: 16px;
+    margin-bottom: 16px;
+    color: white;
+    background-color: var(--primary-backround-color);
+    border: 1px solid #313131;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  .infoCard:not(:last-child){
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .infoCard:hover{
+    background-color: rgb(82, 82, 82);
+  }
+
   .infoCard h2 {
-    font-size: 28px;
+    font-size: 35px;
   }
   .infoCard h3{
-    font-size: 12px;
+    font-size: 11px;
   }
 
   

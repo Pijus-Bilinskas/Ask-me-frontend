@@ -1,7 +1,9 @@
 .qcardsWrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-color: var(--primary-backround-color);
   }
   
   @media only screen and (max-width: 768px) {

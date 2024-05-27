@@ -40,10 +40,6 @@ const Index = () => {
 
     return(
         <PageTemplate>
-           <div className={styles.linkWrapper}>
-            <Link href="/add-question">Ask a question</Link>
-           </div>
-
             {questions && <QcardsWrapper questions={questions}/>}
         </PageTemplate>
     )

@@ -42,6 +42,7 @@ const AddQuestion = () => {
     
     return(
         <PageTemplate>
+            <div className={styles.wrapper}>
             <div className={styles.form}>
             <input
             placeholder="question"
@@ -54,6 +55,7 @@ const AddQuestion = () => {
             title="Add Question"
             onClick={addQuestion}
             />
+            </div>
             </div>
         </PageTemplate>
     );

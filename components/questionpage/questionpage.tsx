@@ -66,37 +66,38 @@ const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
                 <div className={styles.questionWrapper}>
                     {question && (
                         <div className={styles.question}>
+                            <div className={styles.questAndDate}>
                             <h2>{question.question_text}</h2>
                             <p>{question.date}</p>
+                            </div>
+                            <div className={styles.deletBtn}>
                             <Button 
                             className={styles.Button}
                             type="WARNING"
                             title="Delete question"
                             onClick={deleteQuestion}
                             />
+                            </div>
                         </div>
                     )}
                     {answers.length > 0 ? (
                         <div className={styles.answers}>
                             {answers.map((answer) => (
                                 <div key={answer.id} className={styles.answer}>
+                                    <div>
                                     <h3>{answer.answer_text}</h3>
                                     <p>{answer.date}</p>
                                     <p>`Likes { answer.gained_likes_number}`</p>
+                                    </div>
+                                    <div className={styles.deletBtn}>
                                     <Button 
                                     className={styles.Button}
                                     type="WARNING"
                                     title="Delete answer"
                                     onClick={() =>deleteAnswer(answer.id)}
                                     />
+                                    </div>
                                 </div>
-                                // {isShowWarning && (
-                                //     <Modal
-                                //       message="Do you really want to delete this game?"
-                                //       onConfirm={deleteItem}
-                                //       onCancel={() => setShowWarning(false)}
-                                //     />
-                                //   )}
                             ))}
                         </div>
                     ) : (

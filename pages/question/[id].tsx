@@ -67,9 +67,11 @@ const QuestionAndAnswers = () => {
 
     return(
         <PageTemplate>
+            <div className={styles.mainWrapper}>
             {question && answers && <ItemWrapper question={question} answers={answers} />}
            <div className={styles.addAnswer}>
             <input 
+            className={`${isAnswerInserted ? styles.addAnswerValid : styles.addAnswerr}`}
             type="text"
             value={newAnswer}
             onChange={(e)=> setNewAnswer(e.target.value)}
@@ -81,6 +83,7 @@ const QuestionAndAnswers = () => {
             onClick={handleAddAnswer}
             type="NORMAL"
             />
+            </div>
             </div>
         </PageTemplate>
     )

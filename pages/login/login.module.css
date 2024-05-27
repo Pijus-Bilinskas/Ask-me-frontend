@@ -1,0 +1,25 @@
+.contWrapper {
+    background-color: var(--primary-backround-color);
+  padding-bottom: 37.8rem;
+  height: 100%;
+}
+
+.linkWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    background-color: var(--primary-backround-color);
+    font-size: 18px;
+}
+
+.linkWrapper p {
+    color: rgb(221, 221, 221);
+}
+
+.link{
+    color: rgb(209, 209, 209);
+}
+
+.link:hover{
+    color: rgb(233, 233, 233);
+}

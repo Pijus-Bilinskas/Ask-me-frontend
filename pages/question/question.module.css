@@ -1,20 +1,35 @@
-.addAnswer {
-    position: relative;
-    margin: auto;
-    margin-top: 20px;
-    width: 70%;
+.mainWrapper {
+    background-color: rgb(71, 71, 71);
 }
 
-.addAnswer input {
+
+.addAnswer {
+    background-color: rgb(71, 71, 71);
+    position: relative;
+    margin: auto;
+    width: 70%;
+    padding-bottom: 0.5rem;
+}
+
+.addAnswerr {
     width: 40%;
     padding: 10px 50px 10px 10px;
     transition: 0.4s;
-    box-sizing: border-box;
+    background-color: rgb(71, 71, 71);
 }
 
-.addAnswer input:focus {
+.addAnswer:focus {
     width: 90%;
     outline: none;
+    transition: 0.3s;
+}
+
+.addAnswerValid {
+        width: 90%;
+        outline: none;
+        transition: 0.4s;
+        padding: 10px 50px 10px 10px;
+        box-sizing: border-box;
 }
 
 .validBtn {
@@ -26,8 +41,8 @@
   }
   
   .invalidBtn {
-    background-color: rgb(255, 255, 255);
-    color: white;
+    background-color: rgb(71, 71, 71);
+    color: rgb(71, 71, 71);
     cursor: none;
   }
 
