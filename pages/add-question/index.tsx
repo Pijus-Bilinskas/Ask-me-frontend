@@ -33,7 +33,10 @@ const AddQuestion = () => {
                 router.push("/")
             }
         } catch (err) {
-            console.log(err)
+           // @ts-expect-error this is correct way to catch error
+           if(err.response.status === 401) {
+            router.push("/login")
+        }
         }
     };
 

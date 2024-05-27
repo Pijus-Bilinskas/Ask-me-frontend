@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 
 type ButtonProps = {
     onClick: () => void;
-    title: string;
+    title: any;
     type?: "WARNING" | "NORMAL";
     className?: string;
 };
