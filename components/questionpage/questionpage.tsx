@@ -15,7 +15,7 @@ type ItemWrapperProps = {
 };
 
 
-const ItemWrapper = ({ question, answers }: ItemWrapperProps) => {
+const ItemsWrapper = ({ question, answers }: ItemWrapperProps) => {
     const router = useRouter();
 
     const [answerList, setAnswerList] = useState(answers);
@@ -150,4 +150,4 @@ const likeAnswer = async (answer_id: string)  => {
 };
 
 
-export default ItemWrapper;
+export default ItemsWrapper;

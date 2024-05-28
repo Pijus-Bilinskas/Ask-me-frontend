@@ -1,5 +1,4 @@
 import React, {useState } from "react";
-import { links } from "../../constants/link";
 import Button from "@/components/Button/Button";
 import Cookies from "js-cookie";
 import axios from "axios";

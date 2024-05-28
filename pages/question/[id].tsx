@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { AnswerType } from "@/types/answer";
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
-import ItemWrapper from "@/components/questionpage/questionpage";
+import ItemsWrapper from "@/components/questionpage/questionpage";
 import Button from "@/components/Button/Button";
 import styles from "./question.module.css"
 
@@ -69,7 +69,7 @@ const QuestionAndAnswers = () => {
     return(
         <PageTemplate>
             <div className={styles.mainWrapper}>
-            {question && answers && <ItemWrapper question={question} answers={answers} />}
+            {question && answers && <ItemsWrapper question={question} answers={answers} />}
            <div className={styles.addAnswer}>
             <input 
             className={`${isAnswerInserted ? styles.addAnswerValid : styles.addAnswerr}`}
