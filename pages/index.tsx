@@ -14,13 +14,11 @@ import { useRouter } from "next/router";
 
 
 const Index = () => {
-    const router = useRouter();
 
     const [questions, setQuestions] = useState<QuestionType[] | null>(null);
 
     const fetchQuestions = async () => {
         try {
-            
             
 
             const response = await axios.get(`${process.env.SERVER_URL}/questions`);
